@@ -499,8 +499,8 @@ class MultipleDomain
             return;
         }
 
-        $base = $this->getDomainBase();
-        $uri = !empty($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : null;
+        $base = $this->getDomainBase() ?? '';
+        $uri = !empty($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
 
         $base = ltrim($base, '/');
         $uri = ltrim($uri, '/');
